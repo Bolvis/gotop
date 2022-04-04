@@ -38,7 +38,7 @@ func NewCpuWidget(updateInterval time.Duration, horizontalScale int, showAverage
 		ShowPerCpuLoad:  showPerCpuLoad,
 		formatString:    formatString,
 	}
-	self.Title = " CPU Usage "
+	self.Title = " Użycie Procesora "
 	self.HorizontalScale = horizontalScale
 
 	if !(self.ShowAverageLoad || self.ShowPerCpuLoad) {

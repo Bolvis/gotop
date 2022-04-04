@@ -41,7 +41,7 @@ func NewNetWidget(netInterface string) *NetWidget {
 		updateInterval: time.Second,
 		NetInterface:   netInterface,
 	}
-	self.Title = " Network Usage "
+	self.Title = " Obciążenie sieci "
 	if netInterface != "all" {
 		self.Title = fmt.Sprintf(" Network Usage: %s ", netInterface)
 	}
@@ -114,7 +114,7 @@ func (self *NetWidget) update() {
 		recentConverted, unitRecent := utils.ConvertBytes(uint64(recent))
 		totalConverted, unitTotal := utils.ConvertBytes(uint64(total))
 
-		self.Lines[i].Title1 = fmt.Sprintf(" Total %s: %5.1f %s", label, totalConverted, unitTotal)
+		self.Lines[i].Title1 = fmt.Sprintf(" Łącznie %s: %5.1f %s", label, totalConverted, unitTotal)
 		self.Lines[i].Title2 = fmt.Sprintf(" %s/s: %9.1f %2s/s", label, recentConverted, unitRecent)
 	}
 }

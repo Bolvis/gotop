@@ -36,7 +36,7 @@ func NewTempWidget(tempScale TempScale) *TempWidget {
 		TempThreshold:  80,
 		TempScale:      tempScale,
 	}
-	self.Title = " Temperatures "
+	self.Title = " Temperatury "
 
 	if tempScale == Fahrenheit {
 		self.TempThreshold = utils.CelsiusToFahrenheit(self.TempThreshold)

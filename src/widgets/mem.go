@@ -40,7 +40,7 @@ func (self *MemWidget) updateMainMemory() {
 	if err != nil {
 		log.Printf("failed to get main memory info from gopsutil: %v", err)
 	} else {
-		self.renderMemInfo("Main", MemoryInfo{
+		self.renderMemInfo("RAM", MemoryInfo{
 			Total:       mainMemory.Total,
 			Used:        mainMemory.Used,
 			UsedPercent: mainMemory.UsedPercent,
@@ -53,9 +53,9 @@ func NewMemWidget(updateInterval time.Duration, horizontalScale int) *MemWidget 
 		LineGraph:      ui.NewLineGraph(),
 		updateInterval: updateInterval,
 	}
-	self.Title = " Memory Usage "
+	self.Title = " Użycie Pamięci "
 	self.HorizontalScale = horizontalScale
-	self.Data["Main"] = []float64{0}
+	self.Data["RAM"] = []float64{0}
 	self.Data["Swap"] = []float64{0}
 
 	self.updateMainMemory()

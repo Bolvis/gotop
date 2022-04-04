@@ -57,7 +57,7 @@ func NewProcWidget() *ProcWidget {
 		sortMethod:       ProcSortCpu,
 		showGroupedProcs: true,
 	}
-	self.Title = " Processes "
+	self.Title = " Procesy "
 	self.ShowCursor = true
 	self.ShowLocation = true
 	self.ColGap = 3
@@ -108,7 +108,7 @@ func (self *ProcWidget) update() {
 // sortProcs sorts either the grouped or ungrouped []Process based on the sortMethod.
 // Called with every update, when the sort method is changed, and when processes are grouped and ungrouped.
 func (self *ProcWidget) sortProcs() {
-	self.Header = []string{"Count", "Command", "CPU%", "Mem%"}
+	self.Header = []string{"Liczba", "Komenda", "CPU%", "Mem%"}
 
 	if !self.showGroupedProcs {
 		self.Header[0] = "PID"

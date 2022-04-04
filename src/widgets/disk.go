@@ -36,8 +36,8 @@ func NewDiskWidget() *DiskWidget {
 		updateInterval: time.Second,
 		Partitions:     make(map[string]*Partition),
 	}
-	self.Title = " Disk Usage "
-	self.Header = []string{"Disk", "Mount", "Used", "Free", "R/s", "W/s"}
+	self.Title = " Użycie Dysku "
+	self.Header = []string{"Dysk", "Zamontowany", "Używane", "Wolne", "R/s", "W/s"}
 	self.ColGap = 2
 	self.ColResizer = func() {
 		self.ColWidths = []int{
